@@ -6,23 +6,33 @@
     android:layout_height="match_parent"
     android:background="#E03228"
     android:backgroundTint="#E03228"
-    tools:context=".MainActivity">
+    tools:context="si.uni.lj.fe.tnuv.mojaUL.MainActivity">
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="384dp"
         android:layout_height="459dp"
-        app:srcCompat="@drawable/ic_logotipul_m"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="134dp"
+        app:layout_constraintBottom_toTopOf="@+id/entryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logotipul_m" />
 
     <Button
         android:id="@+id/entryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="74dp"
+        android:background="@drawable/bordered_button_red"
         android:backgroundTint="#E03228"
         android:text="Vstop"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="609dp"
-        android:background="@drawable/bordered_button_red"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
