@@ -3,4 +3,12 @@
     <string name="prijava_v_aplikacijo_napis">Prijava v aplikacijo</string>
     <string name="prijava_v_studis_napis">Prijava v STUDIS</string>
     <string name="avtenitkacija_s_prstnim_odtisom_napis">AVTENTICIRAJTE SE Z PRSTNIM ODTISOM</string>
+    <string name="ime_in_priimek_napis">Ime Priimek</string>
+    <string name="seznam_izpitov_napis">Seznam izpitov</string>
+    <string name="vec_na_online_verziji_studis_napis">Online STUDIS</string>
+    <string name="o_studentu_napis">O študentu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="seznam_zaposlenih_napis">Seznam zaposlenih</string>
+
 </resources>

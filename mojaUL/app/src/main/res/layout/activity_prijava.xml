@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="150"
-        android:layout_height="150"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginStart="130dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="131dp"
@@ -34,8 +34,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="60"
-        android:layout_height="60"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="12dp"
@@ -62,13 +62,13 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="70"
-        android:layout_height="70"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="170dp"
         android:layout_marginTop="57dp"
         android:layout_marginEnd="171dp"
         android:layout_marginBottom="42dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
         android:layout_marginTop="42dp"
         android:layout_marginEnd="177dp"
         android:layout_marginBottom="289dp"
-        android:text="TextView"
+        android:text="AVTENTIKACIJA S PRSTNIM ODTISOM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
