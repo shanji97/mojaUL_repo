@@ -10,5 +10,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="seznam_zaposlenih_napis">Seznam zaposlenih</string>
+    <string name="zaposlen_napis">prof. dr. Ime Priimek</string>
+    <string name="email_zaposlenege">Email zaposlenega</string>
+    <string name="email_zaposlenega">E-pošta zaposlenega</string>
+    <string name="telefonska_stevilka_zaposlenega">000123658</string>
+    <string name="stSobe">P01</string>
 
 </resources>

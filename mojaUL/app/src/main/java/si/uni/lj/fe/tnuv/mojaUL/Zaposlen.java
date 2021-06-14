@@ -7,8 +7,10 @@ public class Zaposlen {
     private  String email;
     private  String prostor;
     private  String telefonskaStevilka;
+    private  String povezavaDoProfilneFotografije;
+    private String opis;
 
-    public Zaposlen(String ime, String priimek,String naziv, String email,String prostor, String telefonskaStevilka){
+    public Zaposlen(String ime, String priimek,String naziv, String email,String prostor, String telefonskaStevilka, String povezavaDoProfilneFotografije, String opis){
 
         //V kolikor za testne osebe nimam podatkov, dam notri prazen string in dam privzeto vrednost moje podatke
 
@@ -39,7 +41,21 @@ public class Zaposlen {
             ime="Aleksander";
         }
         this.ime = ime;
+        if(opis=="") {
+         opis="Lorem Ipsum";
+        }
+        this.opis=opis;
+        this.povezavaDoProfilneFotografije = povezavaDoProfilneFotografije;
+    }
 
+    public String getOpis(){
+        return opis;
+    }
+
+    public String getPovezavaDoProfilneFotografije() {
+        if(povezavaDoProfilneFotografije=="")
+            return null;
+        return povezavaDoProfilneFotografije;
     }
 
     public String getIme() {

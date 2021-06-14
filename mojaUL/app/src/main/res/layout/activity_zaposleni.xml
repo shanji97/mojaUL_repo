@@ -6,4 +6,91 @@
     android:layout_height="match_parent"
     tools:context="si.uni.lj.fe.tnuv.mojaUL.zaposleniActivity">
 
+    <TextView
+        android:id="@+id/zaposlen_naslov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="52dp"
+        android:text="@string/zaposlen_napis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="157dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+    <TextView
+        android:id="@+id/email_zaposlenega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="email"
+        android:text="@string/email_zaposlenega"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <TextView
+        android:id="@+id/telefonska_stevilka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="phone"
+        android:text="@string/telefonska_stevilka_zaposlenega"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_contact_phone_24"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_email_24"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_location_on_24"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <TextView
+        android:id="@+id/st_sobe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stSobe"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="77dp"
+        android:layout_height="93dp"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="233dp" />
+
+    <TextView
+        android:id="@+id/druge_informacije"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="263dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
