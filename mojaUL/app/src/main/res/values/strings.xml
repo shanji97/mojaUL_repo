@@ -15,5 +15,6 @@
     <string name="email_zaposlenega">E-pošta zaposlenega</string>
     <string name="telefonska_stevilka_zaposlenega">000123658</string>
     <string name="stSobe">P01</string>
+    <string name="domena_fakultete_FE">fe.uni-lj.si</string>
 
 </resources>

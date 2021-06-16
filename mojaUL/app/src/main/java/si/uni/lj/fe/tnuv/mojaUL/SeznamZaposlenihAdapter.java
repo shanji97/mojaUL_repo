@@ -22,7 +22,7 @@ public class SeznamZaposlenihAdapter extends ArrayAdapter<Zaposlen> {
     public SeznamZaposlenihAdapter(Context c, int vir, ArrayList<Zaposlen> zaposleni){
         super(c,vir,zaposleni);
         mContext = c;
-        resource =vir;
+        resource = vir;
     }
 
     @NonNull
@@ -32,7 +32,7 @@ public class SeznamZaposlenihAdapter extends ArrayAdapter<Zaposlen> {
         String  ime  = getItem(position).getIme();
         String imeInPriimek = getItem(position).getIme()+" "+getItem(position).getPriimek();
 
-        Zaposlen z = new Zaposlen("TAleksander","TKovač","študent","ak3900@student.uni-lj.si","P10","+38640724968");
+        Zaposlen z = new Zaposlen("TAleksander","TKovač","študent","ak3900@student.uni-lj.si","P10","+38640724968","");
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(resource,parent,false);

@@ -62,12 +62,6 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/o_napisih"
-                android:text="@string/seznam_izpitov_napis" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/online_studis"
                 android:text="@string/vec_na_online_verziji_studis_napis" />
         </com.google.android.material.tabs.TabLayout>

@@ -10,10 +10,15 @@
         android:id="@+id/zaposlen_naslov"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="52dp"
+        android:layout_marginBottom="56dp"
         android:text="@string/zaposlen_napis"
+        app:layout_constraintBottom_toTopOf="@+id/email_zaposlenega"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -23,6 +28,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
 
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_account_circle_24" />
@@ -31,66 +40,116 @@
         android:id="@+id/email_zaposlenega"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="35dp"
         android:autoLink="email"
         android:text="@string/email_zaposlenega"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="95dp" />
+        app:layout_constraintBottom_toTopOf="@+id/telefonska_stevilka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/zaposlen_naslov" />
 
     <TextView
         android:id="@+id/telefonska_stevilka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="1dp"
         android:autoLink="phone"
         android:text="@string/telefonska_stevilka_zaposlenega"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="150dp" />
+        app:layout_constraintBottom_toTopOf="@+id/st_sobe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/email_zaposlenega" />
 
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_contact_phone_24"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="150dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/ic_baseline_contact_phone_24" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_email_24"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="95dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/zaposlen_naslov"
+        app:srcCompat="@drawable/ic_baseline_email_24" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_location_on_24"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="186dp" />
+        android:layout_marginStart="223dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="521dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/telefonska_stevilka"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
     <TextView
         android:id="@+id/st_sobe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="500dp"
         android:text="@string/stSobe"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="188dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/telefonska_stevilka"
+        app:layout_constraintTop_toBottomOf="@+id/email_zaposlenega"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="77dp"
         android:layout_height="93dp"
-        app:srcCompat="@drawable/ic_baseline_info_24"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="233dp" />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/druge_informacije"
+        app:layout_constraintEnd_toStartOf="@+id/st_sobe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
 
     <TextView
         android:id="@+id/druge_informacije"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="313dp"
+        android:layout_marginBottom="356dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="263dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
