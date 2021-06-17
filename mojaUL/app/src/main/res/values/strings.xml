@@ -21,10 +21,15 @@
     <string name="datotekeNiMogoceNajti" />
     <string name="datotekaZaBelezenjeAkcij">DatotekaZaBelezenje</string>
     <string name="izkljucnoBelezenjeNapak">BelezenjeNapak</string>
-    <string name="unikatnaKodaAplikacije" >UUIDAplikacija_mojaUL</string>
+    <string name="unikatnaKodaAplikacije">UUIDAplikacija_mojaUL</string>
     <string name="dobrodosli">Dobrodošli v tej aplikaciji.</string>
     <string name="studentski_email">E-poštni naslov študenta.</string>
     <string name="uporabnisko_geslo_studenta">Uporabniško geslo študenta</string>
     <string name="prijava_sistem_mojaUL">Prijava v mojaUL</string>
+    <string name="potrbujetePomoc">Potrebujete pomoč? Kliknite na napis.</string>
+    <string name="niInternetnePovezave">Nimate vzpostavljene povezave z internetom! Prepričajte se, da imate vzpostavljeno povezavo in poskusite še enkrat ali pa se obrnite na vzdr</string>
+    <string name="niInternetnePoveezave">Preverite internetno povezavo in poskusite še enkrat.</string>
+    <string name="prijavaVsistemUspesna">Prijava v sistem uspešna.</string>
+    <string name="kombinacijaNeObstaja">Kombinacija epoštnega sporočila in gesla v sistemu ne obstaja, preverite vnose.</string>
 
 </resources>
