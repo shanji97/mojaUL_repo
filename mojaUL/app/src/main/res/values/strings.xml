@@ -31,5 +31,17 @@
     <string name="niInternetnePoveezave">Preverite internetno povezavo in poskusite še enkrat.</string>
     <string name="prijavaVsistemUspesna">Prijava v sistem uspešna.</string>
     <string name="kombinacijaNeObstaja">Kombinacija epoštnega sporočila in gesla v sistemu ne obstaja, preverite vnose.</string>
+    <string name="mailJeOK_debug">Mail je pravega formata</string>
+    <string name="mailNiPravegaFormata">Prijavite se z mailo, ki vam ga je dala UL.</string>
+    <string name="prijavljam">Prijavljam....</string>
+    <string name="niVnesenegaGesla">Ste pozabili vnesti geslo?</string>
+    <string name="niVneseanegaGesla">Ste pozabili vnesti geslo?!</string>
+    <string name="link_pomoc">https://github.com/shanji97/mojaUL_repo/</string>
+    <string name="studis_gumb">STUDIS</string>
+    <string name="zaposleni_gumb">SeznamZaposlenih</string>
+    <string name="nastavitve">Nastavitvw</string>
+    <string name="jedilnik">Jedilnik</string>
+    <string name="moodle_FRI">Moodle FRI</string>
+    <string name="moodle_FE">Moodle FE</string>
 
 </resources>

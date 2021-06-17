@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         vstop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, getResources().getString(R.string.dobrodosli), Toast.LENGTH_LONG);
+                Toast.makeText(MainActivity.this, getResources().getString(R.string.dobrodosli), Toast.LENGTH_SHORT).show();
                 //Intent myIntent = new Intent(view.getContext(),zaposleniActivity.class);
 
                 startActivity(new Intent(v.getContext(),prijavaVSistemActivity.class));
