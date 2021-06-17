@@ -40,8 +40,9 @@
         android:layout_marginTop="38dp"
         android:layout_marginEnd="131dp"
         android:layout_marginBottom="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/emailStudenta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
         app:srcCompat="@drawable/ic_baseline_account_circle_24" />
@@ -61,21 +62,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/emailStudenta"
         android:layout_width="340dp"
         android:layout_height="48dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="36dp"
+        android:layout_marginBottom="74dp"
         android:ems="10"
+        android:hint="@string/studentski_email"
         android:inputType="textPersonName"
-        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/gesloStudenta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/gesloStudenta"
         android:layout_width="341dp"
         android:layout_height="52dp"
         android:layout_marginStart="35dp"
@@ -83,18 +86,39 @@
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="242dp"
         android:ems="10"
+        android:hint="@string/uporabnisko_geslo_studenta"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/emailStudenta" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/prijavaVsistem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="524dp" />
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="159dp"
+        android:text="@string/prijava_sistem_mojaUL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gesloStudenta" />
+
+    <TextView
+        android:id="@+id/pomocPriPrijavi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="76dp"
+        android:text="@string/potrbujetePomoc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prijavaVsistem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

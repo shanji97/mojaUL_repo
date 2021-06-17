@@ -24,7 +24,7 @@ public class studisActivity extends AppCompatActivity {
         setContentView(R.layout.activity_studis);
         tabLayout = (TabLayout)findViewById(R.id.tabLayout_studis);
         tab1 = (TabItem)findViewById(R.id.O_studentu);
-        tab2 = (TabItem)findViewById(R.id.o_napisih);
+        //tab2 = (TabItem)findViewById(R.id.o_napisih);
         tab3 = (TabItem)findViewById(R.id.online_studis);
         viewPager  = findViewById(R.id.viewPager);
 

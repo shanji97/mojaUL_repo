@@ -16,5 +16,15 @@
     <string name="telefonska_stevilka_zaposlenega">000123658</string>
     <string name="stSobe">P01</string>
     <string name="domena_fakultete_FE">fe.uni-lj.si</string>
+    <string name="ioNapaka">Napaka IO</string>
+    <string name="pisanjeDatotekeUspesno">Pisanje datoteke uspešno</string>
+    <string name="datotekeNiMogoceNajti" />
+    <string name="datotekaZaBelezenjeAkcij">DatotekaZaBelezenje</string>
+    <string name="izkljucnoBelezenjeNapak">BelezenjeNapak</string>
+    <string name="unikatnaKodaAplikacije" >UUIDAplikacija_mojaUL</string>
+    <string name="dobrodosli">Dobrodošli v tej aplikaciji.</string>
+    <string name="studentski_email">E-poštni naslov študenta.</string>
+    <string name="uporabnisko_geslo_studenta">Uporabniško geslo študenta</string>
+    <string name="prijava_sistem_mojaUL">Prijava v mojaUL</string>
 
 </resources>
