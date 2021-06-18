@@ -49,5 +49,9 @@
     <string name="prijavaStudisMojaUL">Prijava v STUDIS znotraj aplikacije</string>
     <string name="prijaviteSeSPristnimOdtisom">Prijavite se s prstnim odtisom, ki ste ga določili v mobilni napravi.</string>
     <string name="tezavePriDelovanju">Težave? Kontaktirajte razvijalca.</string>
+    <string name="nalaganjeNastavitev">Nalaganje nastavitev in podatkov</string>
+    <string name="jsonDatotekaStudenta">https://karjola-shanji.herokuapp.com/student.json</string>
+    <string name="vstopVAplikacijo">Vstop</string>
+    <string name="avtenitkacija_s_prstnim_odtisom_napis_headerx">Avtentikacija s prstnim odtisom</string>
 
 </resources>

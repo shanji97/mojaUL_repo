@@ -3,7 +3,9 @@ package si.uni.lj.fe.tnuv.mojaUL;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DownloadManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +14,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
+
+import com.google.gson.Gson;
+
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
 public class prijavaVSistemActivity extends AppCompatActivity {
@@ -82,11 +87,47 @@ public class prijavaVSistemActivity extends AppCompatActivity {
                             return;
                         }
                         //preverimo, če je uporabnik v sistemu (zaenkrat statično, brez strežnikov
-                        if(email.equals("ak3900@student.uni-lj.si") && geslo.equals("xperia12")){
-                            // vse je vredu, naloži json iz neta
+                        if(email.equals("ak3900@student.uni-lj.si") && geslo.equals("enDvaTri")){
+
+                            Toast.makeText(prijavaVSistemActivity.this,getResources().getString(R.string.nalaganjeNastavitev),Toast.LENGTH_SHORT).show();
+
+                            //Naložimo statičen JSON, v realni aplikaciji bi to potegnili dol s kakega strežnika
+                            String studentJSON = "{\n" +
+                                    "    \"ime\": \"Aleksander\",\n" +
+                                    "    \"priimek\": \"Kovač\",\n" +
+                                    "    \"osebniEmail\": \"aleksander.kovac97@hotmail.com\",\n" +
+                                    "    \"studijskiEmail\": \"ak3900@student.uni-lj.si\",\n" +
+                                    "    \"vpisnaStevilka\": \"64160021\",\n" +
+                                    "    \"naslov\": \"Lendavske gorice 409a\",\n" +
+                                    "    \"postnaStevilka\": \"9220\",\n" +
+                                    "    \"domaciTelefon\": \"+38625761867\",\n" +
+                                    "    \"mobilniTelefon\": \"+38640724968\",\n" +
+                                    "    \"studijskiProgram\": \"Multimedija\",\n" +
+                                    "    \"dodatekKLetniku\": \"A\"\n" +
+                                    "  }";
+
+
+                            Student s = new Student();
+
+                            s = new Gson().fromJson(studentJSON,Student.class);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             Toast.makeText(prijavaVSistemActivity.this,getResources().getString(R.string.prijavaVsistemUspesna),Toast.LENGTH_SHORT).show();
                             Log.d("JSON","Okej, zgeneriraj in naloži podatke");
-                            //nekam shrani te podatke
+
 
 
 
