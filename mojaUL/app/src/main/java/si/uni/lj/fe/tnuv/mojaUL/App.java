@@ -56,6 +56,8 @@ public class App extends Application {
         return res;
     }
 
+    public static Context app_getContext(){ return ctx;}
+
     private String AppId(){
 
         String uniqueID = null;

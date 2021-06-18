@@ -9,6 +9,8 @@ import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 import android.content.Intent;
 import androidx.biometric.BiometricPrompt;
 import androidx.biometric.BiometricManager;
+
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,48 +38,38 @@ public class prijavaActivity extends AppCompatActivity {
             @Override
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
-                //Toast.makeText(prijavaActivity.this,getResources().getString(R.string.))
+                Toast.makeText(prijavaActivity.this,App.getRes().getString(R.string.avtentikacijaNapaka),Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onAuthenticationSucceeded(@NonNull  BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
             //obvesti uporabnika
-                Toast.makeText(prijavaActivity.this,"Yipikayyey",Toast.LENGTH_LONG).show();
+                Toast.makeText(prijavaActivity.this,App.getRes().getString(R.string.avtentikacijaUspesna),Toast.LENGTH_LONG).show();          //zaštartaj novo okno
+                startActivity(new Intent(App.app_getContext(),studisActivity.class));
             }
 
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
-                //obvesti uporabnika
+                Toast.makeText(prijavaActivity.this,App.getRes().getString(R.string.avtetikacijaNiUspela),Toast.LENGTH_LONG).show();
             }
         });
         pI = new BiometricPrompt.PromptInfo.Builder()
-                .setTitle("nastavi naslov")
-               .setSubtitle("nastavi")
-                .setNegativeButtonText("Lol")
+                .setTitle(App.getRes().getString(R.string.prijavaStudisMojaUL))
+               .setSubtitle(App.getRes().getString(R.string.prijaviteSeSPristnimOdtisom))
+                .setNegativeButtonText(getResources().getString(R.string.tezavePriDelovanju))
                .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG).build();
-
-
-
-
 
         prstniOdtis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 bP.authenticate(pI);
-
-
-
-                //        startActivity(new Intent(v.getContext(),studisActivity.class));
             }
         });
 
-
-
-        //če fingerprint passa, lahko gremo naprej
-
     }
 }
+
+
+

@@ -43,5 +43,11 @@
     <string name="jedilnik">Jedilnik</string>
     <string name="moodle_FRI">Moodle FRI</string>
     <string name="moodle_FE">Moodle FE</string>
+    <string name="avtentikacijaUspesna">Avtentikacjia s prstnim odtisom je bila uspešna.</string>
+    <string name="avtentikacijaNapaka">Pri avtentikaciji je prišlo do napake.</string>
+    <string name="avtetikacijaNiUspela">Avtentikacija s prstnim odtisom ni uspela. Prepričajte se, da imate pravi prstni odtis / ali se obrnite na razvijalca.</string>
+    <string name="prijavaStudisMojaUL">Prijava v STUDIS znotraj aplikacije</string>
+    <string name="prijaviteSeSPristnimOdtisom">Prijavite se s prstnim odtisom, ki ste ga določili v mobilni napravi.</string>
+    <string name="tezavePriDelovanju">Težave? Kontaktirajte razvijalca.</string>
 
 </resources>
