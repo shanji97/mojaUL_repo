@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class glavniPanelActivity extends AppCompatActivity {
 
     private Button gumbVStudis;
+    private Button zaposleniGumb;
     private Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,19 @@ public class glavniPanelActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         //prijava v STUDIS
                         i = new Intent(v.getContext(),prijavaActivity.class);
+                        startActivity(i);
+                    }
+                }
+
+        );
+        zaposleniGumb = (Button)findViewById(R.id.zaposleniGumb);
+        zaposleniGumb.setOnClickListener(
+
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //prijava v STUDIS
+                        i = new Intent(v.getContext(),seznamZaposlenih.class);
                         startActivity(i);
                     }
                 }

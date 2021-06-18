@@ -27,7 +27,6 @@ public class seznamZaposlenih extends AppCompatActivity {
         ArrayList<Zaposlen> seznamVsehZaposlenih = new ArrayList<Zaposlen>();
         //dobimov vse objekte in jih "napolnimo"
 
-        //če bo čas, pridobi iz neta
 
         //sicer napolni statično
 
@@ -68,7 +67,7 @@ public class seznamZaposlenih extends AppCompatActivity {
                 "BN514/1-LKN","014768493", "https://www.fe.uni-lj.si/mma_bin.php?id=2016032210172019&src=min","2Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
 
 
-        seznamVsehZaposlenih.add(new Zaposlen("","","","","","", ""));
+        //seznamVsehZaposlenih.add(new Zaposlen("","","","","","", ""));
 
         SeznamZaposlenihAdapter seznamZaposlenihAdapter = new SeznamZaposlenihAdapter(this,R.layout.razporeditev_informacij_zaposlenega,seznamVsehZaposlenih);
         lV.setAdapter(seznamZaposlenihAdapter);
@@ -81,8 +80,6 @@ public class seznamZaposlenih extends AppCompatActivity {
                     Intent myIntent = new Intent(view.getContext(),zaposleniActivity.class);
                     myIntent.putExtra("Zaposlen",new Gson().toJson(seznamVsehZaposlenih.get(position)));
                     startActivity(myIntent);
-
-
             }
         });
 
