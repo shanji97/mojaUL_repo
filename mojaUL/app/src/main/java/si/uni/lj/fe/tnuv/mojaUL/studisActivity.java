@@ -8,10 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
-
-
-
+import com.google.android.material.tabs.TabLayout;
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
 import android.os.Bundle;
@@ -43,7 +40,7 @@ public class studisActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studis);
 
-        tL = (TabLayout)findViewById(R.id.tL);
+        tL =  (TabLayout) findViewById(R.id.tL);
         vP = (ViewPager) findViewById(R.id.viewPage_no2);
 
         ArrayList<String> imenaTabov = new ArrayList<String>();

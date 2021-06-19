@@ -36,6 +36,22 @@ public class App extends Application {
     public String branjeDatotekeInformacija;
     public boolean branjeDatotekeUspesno = false;
 
+    public static void nastaviPodatke(String vrednost,String tip) {
+
+        SharedPreferences sp = ctx.getSharedPreferences(tip,Context.MODE_PRIVATE);
+        SharedPreferences.Editor e = sp.edit();
+        e.putString(tip,vrednost);
+        e.apply();
+
+    }
+    public  static String pridobiPodatke(String tip){
+       SharedPreferences prefs = ctx.getSharedPreferences(tip,Context.MODE_PRIVATE);
+
+
+
+        return prefs.getString(tip,"N/A");
+    }
+
 
     @Override
     public void onCreate() {

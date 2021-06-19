@@ -30,15 +30,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="100dp">
-        <TabLayout
+        <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tL"
-            app:tabTextColor="@color/CgpUL"
+            app:tabTextColor="@color/black"
             app:tabIndicatorColor="@color/CgpUL"
             app:tabSelectedTextColor ="@color/white"
             android:background="@color/CgpUL"
-            ></TabLayout>
+            ></com.google.android.material.tabs.TabLayout>
             <androidx.viewpager.widget.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

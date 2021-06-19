@@ -92,25 +92,15 @@ public class prijavaVSistemActivity extends AppCompatActivity {
                             Toast.makeText(prijavaVSistemActivity.this,getResources().getString(R.string.nalaganjeNastavitev),Toast.LENGTH_SHORT).show();
 
                             //Naložimo statičen JSON, v realni aplikaciji bi to potegnili dol s kakega strežnika
-                            String studentJSON = "{\n" +
-                                    "    \"ime\": \"Aleksander\",\n" +
-                                    "    \"priimek\": \"Kovač\",\n" +
-                                    "    \"osebniEmail\": \"aleksander.kovac97@hotmail.com\",\n" +
-                                    "    \"studijskiEmail\": \"ak3900@student.uni-lj.si\",\n" +
-                                    "    \"vpisnaStevilka\": \"64160021\",\n" +
-                                    "    \"naslov\": \"Lendavske gorice 409a\",\n" +
-                                    "    \"postnaStevilka\": \"9220\",\n" +
-                                    "    \"domaciTelefon\": \"+38625761867\",\n" +
-                                    "    \"mobilniTelefon\": \"+38640724968\",\n" +
-                                    "    \"studijskiProgram\": \"Multimedija\",\n" +
-                                    "    \"dodatekKLetniku\": \"A\"\n" +
-                                    "  }";
 
-
+                            //zgeneriram kar sebe z ze potrebe, drugače dodamo še en konstruktor
                             Student s = new Student();
 
-                            s = new Gson().fromJson(studentJSON,Student.class);
+                           String student_string_res = new Gson().toJson(s);
 
+                           App.nastaviPodatke(student_string_res,"student");
+
+                           //App.nastaviPodatke();
 
 
 
