@@ -3,11 +3,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="si.uni.lj.fe.tnuv.mojaUL.OStudentu">
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="match_parent"
-        android:layout_height="284dp"
-        android:src="@drawable/ic_baseline_account_circle_24" />
-</FrameLayout>
+    tools:context="si.uni.lj.fe.tnuv.mojaUL.OStudentu"/>

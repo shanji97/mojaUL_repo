@@ -1,4 +1,4 @@
-package si.uni.lj.fe.tnuv.mojaUL;
+package si.uni.lj.fe.tnuv.aleksanderkovac.mojaul;
 
 import android.os.Bundle;
 
@@ -8,14 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link OStudentu#newInstance} factory method to
+ * Use the {@link seznameIzpitovFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OStudentu extends Fragment {
+public class seznameIzpitovFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +24,7 @@ public class OStudentu extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public OStudentu() {
+    public seznameIzpitovFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +34,11 @@ public class OStudentu extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment OStudentu.
+     * @return A new instance of fragment seznameIzpitovFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static OStudentu newInstance(String param1, String param2) {
-        OStudentu fragment = new OStudentu();
+    public static seznameIzpitovFragment newInstance(String param1, String param2) {
+        seznameIzpitovFragment fragment = new seznameIzpitovFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,15 +59,6 @@ public class OStudentu extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_o_studentu, container, false);
-
-        //vse nastavimo kar pač hočemo....
-
-
-
-
-
-
-        return v;
+        return inflater.inflate(R.layout.fragment_sezname_izpitov, container, false);
     }
 }
