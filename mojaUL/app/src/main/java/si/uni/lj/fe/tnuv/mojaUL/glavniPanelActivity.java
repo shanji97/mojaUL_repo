@@ -9,11 +9,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class glavniPanelActivity extends AppCompatActivity {
 
-    private Button gumbVStudis;
+    private ImageView FE_STRAN; //@+id/FE_STRAN
+    private ImageView STUDIS; //STUDIS
+    private ImageView ZAPOSLENI; //@+id/ZAPOSLENI
+
+    private ImageView FE; //@+id/FE_STRAN
     private Button zaposleniGumb;
     private Intent i;
     @Override
@@ -21,8 +26,8 @@ public class glavniPanelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glavni_panel);
 
-        gumbVStudis = (Button)findViewById(R.id.studisGumb);
-       gumbVStudis.setOnClickListener(
+        STUDIS = (ImageView) findViewById(R.id.STUDIS);
+       STUDIS.setOnClickListener(
 
                 new View.OnClickListener() {
                     @Override
@@ -32,20 +37,31 @@ public class glavniPanelActivity extends AppCompatActivity {
                         startActivity(i);
                     }
                 }
-
         );
-        zaposleniGumb = (Button)findViewById(R.id.zaposleniGumb);
-        zaposleniGumb.setOnClickListener(
+       ZAPOSLENI = (ImageView)findViewById(R.id.ZAPOSLENI);
+        /*zaposleniGumb = (Button)findViewById(R.id.zaposleniGumb);*/
+       ZAPOSLENI.setOnClickListener(
 
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //prijava v STUDIS
+
                         i = new Intent(v.getContext(),seznamZaposlenih.class);
                         startActivity(i);
                     }
                 }
+        );
+       FE = (ImageView) findViewById(R.id.FE_STRAN);
+        FE.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
+                        i = new Intent(v.getContext(),WebviewActivity.class);
+                        i.putExtra(getResources().getString(R.string.linkFaksa),getResources().getString(R.string.linkFaksa));
+                        startActivity(i);
+                    }
+                }
         );
     }
 }

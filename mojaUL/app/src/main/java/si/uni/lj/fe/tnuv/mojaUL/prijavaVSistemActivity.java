@@ -32,17 +32,7 @@ public class prijavaVSistemActivity extends AppCompatActivity {
 
         prijavaVSistem = (Button)findViewById(R.id.prijavaVsistem);
         pomocPriPrijavi_tv = (TextView)findViewById(R.id.pomocPriPrijavi);
-        /*
-           vstop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, getResources().getString(R.string.dobrodosli), Toast.LENGTH_LONG);
-                //Intent myIntent = new Intent(view.getContext(),zaposleniActivity.class);
 
-                startActivity(new Intent(v.getContext(),prijavaVSistemActivity.class));
-            }
-        });
-        * */
         pomocPriPrijavi_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

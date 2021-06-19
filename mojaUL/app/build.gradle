@@ -37,9 +37,6 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'de.gerdi-project:GSON:6.0.6'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
-
-
-
     testImplementation 'junit:junit:4.+'
 
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

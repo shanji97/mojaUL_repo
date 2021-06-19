@@ -1,5 +1,7 @@
 package si.uni.lj.fe.tnuv.mojaUL;
 
+import com.google.gson.Gson;
+
 public class Student {
     String ime;
     String priimek;
@@ -19,7 +21,6 @@ public class Student {
 
     public Student
             (
-
             ){
 
         this.ime = "Aleksander";
@@ -37,11 +38,13 @@ public class Student {
         this.dodatekKLetnik="A";
 
     }
+
     public void shraniStudenta(Student s){
 
 
-        App.nastaviPodatke(new Gson().To,);
+        App.nastaviPodatke(new Gson().toJson(s),"student");
     }
+
 
     public String getIme() {
         return ime;

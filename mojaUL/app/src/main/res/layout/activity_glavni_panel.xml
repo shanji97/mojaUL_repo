@@ -1,160 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="si.uni.lj.fe.tnuv.mojaUL.glavniPanelActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/glavniPanel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/seznam_zaposlenih_napis"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toEndOf="parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border">
 
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            app:srcCompat="@drawable/ic_baseline_campaign_24" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+        <TextView
 
-    <Button
-        android:id="@+id/studisGumb"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="59dp"
-        android:text="@string/studis_gumb"
-        app:layout_constraintBottom_toTopOf="@+id/nastavitve2"
-        app:layout_constraintEnd_toStartOf="@+id/zaposleniGumb"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+            android:text="@string/glavni_panel_napis" />
 
-    <Button
-        android:id="@+id/zaposleniGumb"
-        android:layout_width="160dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="147dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="7dp"
-        android:text="@string/zaposleni_gumb"
-        app:layout_constraintBottom_toTopOf="@+id/nastavitve"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/studisGumb"
-        app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+    <!--RL vsebine-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp">
 
-    <Button
-        android:id="@+id/nastavitve"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="491dp"
-        android:text="@string/nastavitve"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nastavitve2"
-        app:layout_constraintTop_toBottomOf="@+id/zaposleniGumb" />
 
-    <Button
-        android:id="@+id/nastavitve2"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="165dp"
-        android:layout_marginTop="137dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="15dp"
-        android:text="@string/jedilnik"
-        app:layout_constraintBottom_toTopOf="@+id/moodleFRI"
-        app:layout_constraintEnd_toStartOf="@+id/nastavitve"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/glavniPanel" />
+            <ImageView
+                android:id="@+id/STUDIS"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border_red"
+                app:srcCompat="@drawable/ic_baseline_book_24"></ImageView>
 
-    <Button
-        android:id="@+id/moodleFE"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="430dp"
-        android:text="@string/moodle_FE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/moodleFRI"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studisGumb" />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="180dp"
 
-    <Button
-        android:id="@+id/moodleFRI"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="211dp"
-        android:layout_marginBottom="115dp"
-        android:text="@string/moodle_FRI"
-        app:layout_constraintBottom_toTopOf="@+id/feInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/moodleFE"
-        app:layout_constraintTop_toBottomOf="@+id/nastavitve2" />
+                android:text="@string/STUDIS"
+                android:textAlignment="center"
+                android:textColor="@color/CgpUL"
+                android:textSize="20sp">
+            </TextView>
 
-    <Button
-        android:id="@+id/feInfo"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginBottom="84dp"
-        android:text="@string/zaposleni_gumb"
-        app:layout_constraintBottom_toTopOf="@+id/friInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moodleFRI" />
+            <ImageView
+                android:id="@+id/ZAPOSLENI"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border_red"
+                app:srcCompat="@drawable/ic_baseline_person_outline_24"></ImageView>
 
-    <Button
-        android:id="@+id/friInfo"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="186dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="146dp"
-        android:text="@string/zaposleni_gumb"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feInfo" />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="180dp"
 
-    <Button
-        android:id="@+id/ulInfo"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="186dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="146dp"
-        android:text="@string/zaposleni_gumb"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feInfo" />
+                android:text="@string/ZAPOSLENI"
+                android:textAlignment="center"
+                android:textColor="@color/CgpUL"
+                android:textSize="20sp">
+            </TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/NASTAVITVE"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/border_red"
+                app:srcCompat="@drawable/ic_baseline_settings_24"></ImageView>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="220dp"
+
+                android:text="@string/nastavitve"
+                android:textAlignment="center"
+                android:textColor="@color/CgpUL"
+                android:textSize="20sp">
+            </TextView>
+            <ImageView
+                android:id="@+id/FE_STRAN"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="420dp"
+                android:background="@drawable/border_red"
+                app:srcCompat="@drawable/ic_baseline_web_24"></ImageView>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="570dp"
+
+                android:text="@string/spletnaStranFakultete"
+                android:textAlignment="center"
+                android:textColor="@color/CgpUL"
+                android:textSize="20sp">
+            </TextView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+
+    <!--
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="si.uni.lj.fe.tnuv.mojaUL.glavniPanelActivity">
+
+
+
+
+        <Button
+            android:id="@+id/studisGumb"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="67dp"
+            android:layout_marginEnd="59dp"
+            android:text="@string/studis_gumb"
+            app:layout_constraintBottom_toTopOf="@+id/nastavitve2"
+            app:layout_constraintEnd_toStartOf="@+id/zaposleniGumb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+        <Button
+            android:id="@+id/zaposleniGumb"
+            android:layout_width="160dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="147dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="7dp"
+            android:text="@string/zaposleni_gumb"
+            app:layout_constraintBottom_toTopOf="@+id/nastavitve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/studisGumb"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/nastavitve"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="491dp"
+            android:text="@string/nastavitve"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nastavitve2"
+            app:layout_constraintTop_toBottomOf="@+id/zaposleniGumb" />
+
+        <Button
+            android:id="@+id/nastavitve2"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="137dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/jedilnik"
+            app:layout_constraintBottom_toTopOf="@+id/moodleFRI"
+            app:layout_constraintEnd_toStartOf="@+id/nastavitve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/glavniPanel" />
+
+        <Button
+            android:id="@+id/moodleFE"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="430dp"
+            android:text="@string/moodle_FE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/moodleFRI"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studisGumb" />
+
+        <Button
+            android:id="@+id/moodleFRI"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="211dp"
+            android:layout_marginBottom="115dp"
+            android:text="@string/moodle_FRI"
+            app:layout_constraintBottom_toTopOf="@+id/feInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/moodleFE"
+            app:layout_constraintTop_toBottomOf="@+id/nastavitve2" />
+
+        <Button
+            android:id="@+id/feInfo"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="176dp"
+            android:layout_marginBottom="84dp"
+            android:text="@string/zaposleni_gumb"
+            app:layout_constraintBottom_toTopOf="@+id/friInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moodleFRI" />
+
+        <Button
+            android:id="@+id/friInfo"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="186dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="146dp"
+            android:text="@string/zaposleni_gumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feInfo" />
+
+        <Button
+            android:id="@+id/ulInfo"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="186dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="146dp"
+            android:text="@string/zaposleni_gumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feInfo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    -->

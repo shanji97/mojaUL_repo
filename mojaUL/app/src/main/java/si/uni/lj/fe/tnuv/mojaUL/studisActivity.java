@@ -12,10 +12,7 @@ import com.google.android.material.tabs.TabLayout;
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
 import android.os.Bundle;
-import android.view.Choreographer;
 
-
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,15 +22,6 @@ public class studisActivity extends AppCompatActivity {
     private TabLayout tL;
     private ViewPager vP;
 
-
-
-/*
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
-    private TabItem tab1, tab2, tab3;
-
-    public PageAdapter pageAdapter;
-*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

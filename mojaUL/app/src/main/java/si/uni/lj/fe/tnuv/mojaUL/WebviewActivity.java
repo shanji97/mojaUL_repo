@@ -15,11 +15,15 @@ public class WebviewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
-
+        Toast.makeText(this,getResources().getString(R.string.nalagamStran),Toast.LENGTH_SHORT).show();
         wW = (WebView) findViewById(R.id.webView_mojaUL);
         Intent intent = getIntent();
 
+        wW.getSettings().setJavaScriptEnabled(true);
+        wW.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 
+        wW.getSettings().setBuiltInZoomControls(true);
+        //wW.setInitialScale(50);
         if(!App.getInstance().jeInternetnaPovezavaVzpostavljena()){
             Toast.makeText(this,getResources().getString(R.string.niInternetnePoveezave),Toast.LENGTH_LONG).show();
             return;
