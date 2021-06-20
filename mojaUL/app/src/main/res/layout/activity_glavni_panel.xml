@@ -99,6 +99,29 @@
                 android:textSize="20sp">
             </TextView>
             <ImageView
+                android:id="@+id/ODJAVA"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/border_red"
+                app:srcCompat="@drawable/ic_baseline_power_settings_new_24"></ImageView>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="220dp"
+
+                android:text="@string/odjava"
+                android:textAlignment="center"
+                android:textColor="@color/CgpUL"
+                android:textSize="20sp">
+            </TextView>
+
+
+            <!---->
+            <ImageView
                 android:id="@+id/FE_STRAN"
                 android:layout_width="150dp"
                 android:layout_height="150dp"

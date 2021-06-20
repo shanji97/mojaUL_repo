@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.net.ConnectivityManager;
-import android.net.Network;
 import android.net.NetworkInfo;
 import android.util.Log;
 
@@ -13,7 +12,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.UUID;
 
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
@@ -47,10 +45,12 @@ public class App extends Application {
     }
     public  static String pridobiPodatke(String tip){
        SharedPreferences prefs = ctx.getSharedPreferences(tip,Context.MODE_PRIVATE);
+       return prefs.getString(tip,"N/A");
+    }
+    public static void izbrisiPodatke(String tip){
+        SharedPreferences sp = ctx.getSharedPreferences(tip,Context.MODE_PRIVATE);
+        sp.edit().remove(tip).apply();
 
-
-
-        return prefs.getString(tip,"N/A");
     }
 
 

@@ -2,12 +2,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="si.uni.lj.fe.tnuv.mojaUL.OnlineStudis">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ime_in_priimek_Uporabnika"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:text="@string/Ne_najdete_funkcionalnosti"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/onLineSTUDIS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="158dp"
+                android:layout_marginTop="125dp"
+                android:background="@drawable/border_red"
+                android:backgroundTint="@color/CgpUL"
+                android:textColor="#E03228"
+                app:backgroundTint="@null"
+                android:text="@string/poditeNaOnlineStudis"
+                />
+        </RelativeLayout>
+
+
+
+    </ScrollView>
 
 </FrameLayout>

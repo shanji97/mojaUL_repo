@@ -30,13 +30,17 @@
             android:id="@+id/naziv_zaposlenega"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="50dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:text="@string/nazivZaposlenega" />
         <TextView
             android:id="@+id/ime_zaposlenega"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
+
             android:text="@string/ime_in_priimek_zaposlenega_napis" />
     </RelativeLayout>
 </LinearLayout>

@@ -2,10 +2,10 @@
     android:shape="rectangle" >
     <stroke android:width="2dp"
         android:color="@color/color_stroke_redUL"/>
-    <corners android:bottomLeftRadius="2dp"
-        android:topLeftRadius="2dp"
-        android:bottomRightRadius="2dp"
-        android:topRightRadius="2dp" />
+    <corners android:bottomLeftRadius="50dp"
+        android:topLeftRadius="50dp"
+        android:bottomRightRadius="50dp"
+        android:topRightRadius="50dp" />
     <gradient android:startColor="@android:color/transparent"
         android:endColor="@android:color/transparent"
         android:angle="90"/>

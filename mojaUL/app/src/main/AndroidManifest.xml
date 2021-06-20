@@ -32,11 +32,7 @@
         <activity android:name="si.uni.lj.fe.tnuv.mojaUL.WebviewActivity"></activity>
         <activity android:name="si.uni.lj.fe.tnuv.mojaUL.prijavaVSistemActivity" />
         <activity android:name="si.uni.lj.fe.tnuv.mojaUL.glavniPanelActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="si.uni.lj.fe.tnuv.mojaUL.prijavaActivity"/>
         <activity android:name="si.uni.lj.fe.tnuv.mojaUL.studisActivity">
@@ -44,8 +40,13 @@
         <activity android:name="si.uni.lj.fe.tnuv.mojaUL.nastavitveActivity" />
         <activity android:name="si.uni.lj.fe.tnuv.mojaUL.seznamZaposlenih"></activity> <!-- <activity android:name=".prijavaVSistemActivity" /> -->
         <activity android:name="si.uni.lj.fe.tnuv.mojaUL.zaposleniActivity" />
-        <activity android:name="si.uni.lj.fe.tnuv.mojaUL.MainActivity">
+        <activity android:name="si.uni.lj.fe.tnuv.mojaUL.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
     </application>

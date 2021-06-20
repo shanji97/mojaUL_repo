@@ -90,9 +90,6 @@ public class prijavaVSistemActivity extends AppCompatActivity {
 
                            App.nastaviPodatke(student_string_res,"student");
 
-                           //App.nastaviPodatke();
-
-
                             Toast.makeText(prijavaVSistemActivity.this,getResources().getString(R.string.prijavaVsistemUspesna),Toast.LENGTH_SHORT).show();
                             Log.d("JSON","Okej, zgeneriraj in naloži podatke");
                              //preusmeri uporabnika na glavni panel

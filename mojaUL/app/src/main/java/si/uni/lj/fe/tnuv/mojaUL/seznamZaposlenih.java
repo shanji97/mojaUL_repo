@@ -18,7 +18,6 @@ import java.util.ArrayList;
 
 public class seznamZaposlenih extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); //ok
@@ -27,14 +26,10 @@ public class seznamZaposlenih extends AppCompatActivity {
         ListView lV = (ListView)findViewById(R.id.seznamZaposlenih);//ok
         ArrayList<Zaposlen> seznamVsehZaposlenih = new ArrayList<Zaposlen>(); //ok
 
-
-        //sicer napolni statično
         //TU JE POTREBNO IMETI POVEZAVO, KI SE KONČA S fotka.jpg
 
         seznamVsehZaposlenih.add( new Zaposlen("Janez", "Bešter", "prof. dr.",
                 "BN511-KAB","+38614768431", "https://i.imgur.com/p454aZz.jpg","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. "));
-
-
 
         seznamVsehZaposlenih.add( new Zaposlen("Jaka", "Sodnik", "prof. dr.",
                 "BN509-KAB","014768494", "https://i.imgur.com/nFLAPZ7.jpg","2Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
@@ -43,7 +38,7 @@ public class seznamZaposlenih extends AppCompatActivity {
                 "BN514/1-LKN","+38614768938", "https://i.imgur.com/QjJx0LC.jpg","2Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
 
         seznamVsehZaposlenih.add( new Zaposlen("Anton", "Kos", "izr. prof. dr.",
-                "BN514/1-LKN","014768493", "https://i.imgur.com/hHtyhQE.jpg","2Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
+                "BN514/1-LKN","+38614768493", "https://i.imgur.com/hHtyhQE.jpg","2Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
         //PODVOJIMO kar te vnose
         seznamVsehZaposlenih.add( new Zaposlen("Janez-2", "Bešter-2", "prof. dr.",
                 "BN511-KAB","+38614768431", "https://www.fe.uni-lj.si/mma_bin.php?id=2+38617061411062592&src=min","Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
@@ -68,10 +63,6 @@ public class seznamZaposlenih extends AppCompatActivity {
 
         seznamVsehZaposlenih.add( new Zaposlen("Anton-3", "Kos-3", "izr. prof. dr.",
                 "BN514/1-LKN","+38614768493", "https://www.fe.uni-lj.si/mma_bin.php?id=2016032210172019&src=min","2Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
-
-
-
-
 
         SeznamZaposlenihAdapter seznamZaposlenihAdapter = new SeznamZaposlenihAdapter(this,R.layout.razporeditev_informacij_zaposlenega,seznamVsehZaposlenih);
         lV.setAdapter(seznamZaposlenihAdapter);
