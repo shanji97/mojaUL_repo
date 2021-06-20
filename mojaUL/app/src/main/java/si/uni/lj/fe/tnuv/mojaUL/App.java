@@ -18,6 +18,7 @@ import java.util.UUID;
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
 public class App extends Application {
+
     private static App mInstance;
     private static Resources res;
     private  static Context ctx;

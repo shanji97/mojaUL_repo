@@ -5,6 +5,7 @@ import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -21,6 +22,7 @@ public class zaposleniActivity extends AppCompatActivity {
         String zaposlenJson = i.getStringExtra("Zaposlen");
         z = new Gson().fromJson(zaposlenJson,Zaposlen.class);
 
+
         //Nastavimo podatke
 
         TextView tV = (TextView) findViewById(R.id.zaposlen_naslov);
@@ -33,7 +35,8 @@ public class zaposleniActivity extends AppCompatActivity {
                 tV.setText(z.getProstor());
         tV = (TextView) findViewById(R.id.druge_informacije);
             tV.setText(z.getOpis());
-
+        ImageView iV = (ImageView) findViewById(R.id.profilnaFotkaProfesorja);
+        new ImageDownloader(iV).execute(z.getPovezavaDoProfilneFotografije());
 
 
 

@@ -93,27 +93,9 @@ public class prijavaVSistemActivity extends AppCompatActivity {
                            //App.nastaviPodatke();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
                             Toast.makeText(prijavaVSistemActivity.this,getResources().getString(R.string.prijavaVsistemUspesna),Toast.LENGTH_SHORT).show();
                             Log.d("JSON","Okej, zgeneriraj in naloži podatke");
-
-
-
-
-
-
-                            //preusmeri uporabnika na glavni panel
+                             //preusmeri uporabnika na glavni panel
                             startActivity(new Intent(v.getContext(),glavniPanelActivity.class));
 
                         }
@@ -131,19 +113,3 @@ public class prijavaVSistemActivity extends AppCompatActivity {
 
     }
 }
-/* @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        vstop = (Button) findViewById(R.id.gumbZaVstopVAplikacijo);
-
-
-        vstop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, getResources().getString(R.string.dobrodosli), Toast.LENGTH_LONG);
-                //Intent myIntent = new Intent(view.getContext(),zaposleniActivity.class);
-
-                startActivity(new Intent(v.getContext(),prijavaVSistemActivity.class));
-            }
-        });*/

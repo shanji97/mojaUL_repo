@@ -3,7 +3,7 @@ package si.uni.lj.fe.tnuv.mojaUL;
 import androidx.appcompat.app.AppCompatActivity;
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
-import android.app.Person;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,21 +17,26 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class seznamZaposlenih extends AppCompatActivity {
-    public  ArrayList<Zaposlen>  seznamVsehZaposlenih;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seznam_zaposlenih);
-        ListView lV = (ListView)findViewById(R.id.seznamZaposlenih);
-        ArrayList<Zaposlen> seznamVsehZaposlenih = new ArrayList<Zaposlen>();
-        //dobimov vse objekte in jih "napolnimo"
+        super.onCreate(savedInstanceState); //ok
+        setContentView(R.layout.activity_seznam_zaposlenih); //ok
+
+        ListView lV = (ListView)findViewById(R.id.seznamZaposlenih);//ok
+        ArrayList<Zaposlen> seznamVsehZaposlenih = new ArrayList<Zaposlen>(); //ok
 
 
         //sicer napolni statično
+        //TU JE POTREBNO IMETI POVEZAVO, KI SE KONČA S fotka.jpg
+        seznamVsehZaposlenih.add( new Zaposlen("Janezek", "Bešter", "prof. dr.",
+                "BN511-KAB","014768431", "https://cdn.pixabay.com/photo/2021/05/24/12/17/rocks-6278936_960_720.jpg","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. "));
 
         seznamVsehZaposlenih.add( new Zaposlen("Janez", "Bešter", "prof. dr.",
                 "BN511-KAB","014768431", "https://www.fe.uni-lj.si/mma_bin.php?id=2017061411062592&src=min","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. "));
+
+
 
         seznamVsehZaposlenih.add( new Zaposlen("Jaka", "Sodnik", "prof. dr.",
                 "BN509-KAB","014768494", "https://www.fe.uni-lj.si/mma_bin.php?id=2014073116103501&src=min","2Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
@@ -67,7 +72,8 @@ public class seznamZaposlenih extends AppCompatActivity {
                 "BN514/1-LKN","014768493", "https://www.fe.uni-lj.si/mma_bin.php?id=2016032210172019&src=min","2Na govorilnih urah ste dobrodošli po predhodnem dogovoru, na elektronsko pošto ali telefonsko številko"));
 
 
-        //seznamVsehZaposlenih.add(new Zaposlen("","","","","","", ""));
+
+
 
         SeznamZaposlenihAdapter seznamZaposlenihAdapter = new SeznamZaposlenihAdapter(this,R.layout.razporeditev_informacij_zaposlenega,seznamVsehZaposlenih);
         lV.setAdapter(seznamZaposlenihAdapter);
