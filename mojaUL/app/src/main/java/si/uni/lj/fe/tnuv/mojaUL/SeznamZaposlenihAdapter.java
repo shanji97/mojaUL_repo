@@ -66,9 +66,6 @@ public class SeznamZaposlenihAdapter extends ArrayAdapter<Zaposlen> {
 
         return convertView;
     }
-
-
-
 }
 class ImageDownloader extends  AsyncTask<String,Void,Bitmap>{
     private final WeakReference<ImageView> iVR;

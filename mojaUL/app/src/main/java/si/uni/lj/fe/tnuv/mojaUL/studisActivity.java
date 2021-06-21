@@ -9,9 +9,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
+import com.google.gson.Gson;
+
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -21,12 +27,24 @@ public class studisActivity extends AppCompatActivity {
 
     private TabLayout tL;
     private ViewPager vP;
+    private  Student s = null;
+    private Boolean paused = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studis);
+
+        String podatkiStudenta = App.pridobiPodatke(getResources().getString(R.string.student_podatki));
+        if (podatkiStudenta == null || podatkiStudenta.equals("")) {
+            Toast.makeText(studisActivity.this, getResources().getString(R.string.podatkovStudentaNi), Toast.LENGTH_SHORT).show();
+            // za potrebe aplikacije nalozimo nove podatke
+            s = new Student();
+        } else {
+            s = new Gson().fromJson(podatkiStudenta, Student.class);
+            //podatki uspešno naloženi
+        }
 
         tL =  (TabLayout) findViewById(R.id.tL);
         vP = (ViewPager) findViewById(R.id.viewPage_no2);
@@ -63,8 +81,96 @@ public class studisActivity extends AppCompatActivity {
         viewPager.setAdapter(mA);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        paused = true;
+        //shranimo študenta v preferences
+        Student s;
+        String podatkiStudenta = App.pridobiPodatke(getResources().getString(R.string.student_podatki));
+        if (podatkiStudenta == null || podatkiStudenta.equals("")) {
+            Toast.makeText(studisActivity.this, getResources().getString(R.string.podatkovStudentaNi), Toast.LENGTH_SHORT).show();
+            // za potrebe aplikacije nalozimo nove podatke
+            s = new Student();
+        } else {
+            s = new Gson().fromJson(podatkiStudenta, Student.class);
+            //podatki uspešno naloženi
+        }
+
+        //podatke pošilji na strežnik oz. v tem primeru, bo to moj študentski mail
+
+        if (!App.getInstance().jeInternetnaPovezavaVzpostavljena()) {
+            //obvesti, da ni povezave
+            return;
+        }
+        String[] prejemniki = {
+                getResources().getString(R.string.streznikZaPodatke)
+        };
+
+        posljiEmail(prejemniki, null, getResources().getString(R.string.posredoVanje_podatkov_strezniku), new Gson().toJson(s));
+
+        Toast.makeText(studisActivity.this, App.getInstance().mailUspesnoPoslan, Toast.LENGTH_SHORT).show();
+
+
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(paused){
+
+
+        Intent i = new Intent(this,glavniPanelActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(i);
+        }
+
+    }
+    public void posljiEmail(
+            String[] prejemniki,
+            String[] cc,
+            String zadeva,
+            String sporocilo
+
+    ){
+        //zaenkrat samo prikažemo kaj bi se poslalo na REST Api, strežnik, če bi le-te obstajal.
+
+       App.getInstance().mailUspesnoPoslanStatus = false;
+        Intent i = new Intent(Intent.ACTION_SEND);
+
+        i.setData(Uri.parse("mailto:"));
+        i.setType("text/plain");
+        i.putExtra(Intent.EXTRA_EMAIL, prejemniki);
+        if (cc != null && cc.length>0){
+            i.putExtra(Intent.EXTRA_CC,cc);
+        }
+        i.setType("message/rfc822");
+        i.putExtra(Intent.EXTRA_SUBJECT, zadeva);
+        i.putExtra(Intent.EXTRA_TEXT, sporocilo);
+        try {
+            //trenutna rešitev, bi drugače rešil z REST APIji
+            startActivity(Intent.createChooser(i,zadeva));
+            App.getInstance().mailUspesnoPoslan = getResources().getString(R.string.mailJeUspesnoPoslan);
+            App.getInstance().mailUspesnoPoslanStatus = true;
+        }
+        catch (Exception e){
+           App.getInstance().mailUspesnoPoslan =  getResources().getString(R.string.mailNeuspesnoPoslan);
+            Log.e("E",App.getInstance().eToString(e));
+
+        }
+
+
+
+    }
+/*
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }*/
+
 
 }
+
 class MainAdapter extends FragmentPagerAdapter {
     ArrayList<String> titels = new ArrayList<String>();
     List<Fragment> fList = new ArrayList<Fragment>();

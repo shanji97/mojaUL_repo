@@ -70,5 +70,16 @@
     <string name="Ne_najdete_funkcionalnosti">Ne najdete funkcionalnosti?</string>
     <string name="poditeNaOnlineStudis">Pojdite na online STUDIS</string>
     <string name="kontaktniPodatki">Kontaktni podatki.</string>
+    <string name="student_podatki">student</string>
+    <string name="podatkovStudentaNi">Shranjeni podatkov o študentu ni.</string>
+    <string name="mailJeUspesnoPoslan">Uspešno poslano!</string>
+    <string name="mailNeuspesnoPoslan">Mail ni bi uspešno poslan!</string>
+    <string name="NAPAKA_VRSTA_DATOTEKE">NAPAKA</string>
+    <string name="streznikZaPodatke">ak3900@student.uni-lj.si</string>
+    <string name="posredoVanje_podatkov_strezniku">Posredovanje podatkov stre</string>
+    <string name="razvijalec">ak3900@student.uni-lj.si</string>
+    <string name="NAPAKA_V_APLIKACIJI">Napaka v aplikaciji.</string>
+    <string name="nalagamZaposlene">Nalagam seznam zaposlenih</string>
+    <string name="nalagamZaposlenega">Nalagam informacije zaposlenega</string>
 
 </resources>

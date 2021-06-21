@@ -26,6 +26,8 @@ public class prijavaActivity extends AppCompatActivity {
     private BiometricPrompt bP;
     private BiometricPrompt.PromptInfo pI;
 
+    private boolean paused=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +69,24 @@ public class prijavaActivity extends AppCompatActivity {
                 bP.authenticate(pI);
             }
         });
+
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        paused = true;
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(paused){
+
+
+            Intent i = new Intent(this,glavniPanelActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+        }
 
     }
 }

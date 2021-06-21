@@ -25,6 +25,29 @@ public class prijavaVSistemActivity extends AppCompatActivity {
     private TextView pomocPriPrijavi_tv;
     private String geslo="";
     private  String email="";
+
+    private  boolean paused = false;
+
+    //LifeCycle Events
+    @Override
+    protected void onPause() {
+        super.onPause();
+        paused = true;
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(paused){
+
+
+            Intent i = new Intent(this,MainActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+        }
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

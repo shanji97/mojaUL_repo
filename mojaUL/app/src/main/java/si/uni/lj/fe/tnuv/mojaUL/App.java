@@ -2,16 +2,21 @@ package si.uni.lj.fe.tnuv.mojaUL;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.util.Log;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.io.Writer;
 
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
@@ -32,6 +37,10 @@ public class App extends Application {
     public String pisanjeDatotekeInformacija;
     public boolean pisanjeDatotekeUspesno = false;
 
+    public String mailUspesnoPoslan;
+    public boolean mailUspesnoPoslanStatus = false;
+
+
     public String branjeDatotekeInformacija;
     public boolean branjeDatotekeUspesno = false;
 
@@ -50,6 +59,7 @@ public class App extends Application {
     public static void izbrisiPodatke(String tip){
         SharedPreferences sp = ctx.getSharedPreferences(tip,Context.MODE_PRIVATE);
         sp.edit().remove(tip).apply();
+
 
     }
 
@@ -97,7 +107,8 @@ public class App extends Application {
         return uniqueID;
     }
 
-    //Še od prejšnjič
+
+    //FILES
     private   static void kreiranjeDatotek(){
 
         String [] datoteke = new String[]{
@@ -108,8 +119,10 @@ public class App extends Application {
     }
     public void vpisiDatoteko(String vrsta, String vsebina){
         String datoteka="";
+        vsebina = String.join("\n",vsebina);
         switch (vrsta){
             //Beleženje akcij
+            default:
             case "NAPAKA": datoteka = getResources().getString(R.string.izkljucnoBelezenjeNapak); break;
             case    "BELEZENJE": datoteka = getResources().getString(R.string.datotekaZaBelezenjeAkcij); break;
         }
@@ -127,6 +140,18 @@ public class App extends Application {
             Log.e("mojaUL "+ UUIDaplikacije,getRes().getString(R.string.ioNapaka),e);
             pisanjeDatotekeInformacija = getRes().getString(R.string.ioNapaka);
             pisanjeDatotekeUspesno = false;
+        }
+        if(vrsta.equals("NAPAKA") && jeInternetnaPovezavaVzpostavljena()){
+            String[] razvijalec = {
+                    res.getString(R.string.razvijalec),
+
+            };
+
+            //-> bi edino smiselno blo delati s HTTP requesti
+
+            //String vsebina_datoteke = beriIzDatoteke(getResources().getString(R.string.izkljucnoBelezenjeNapak));
+            //posljiDebugEmail(razvijalec,null,res.getString(R.string.NAPAKA_V_APLIKACIJI),vsebina_datoteke);
+
         }
         pisanjeDatotekeInformacija = getRes().getString(R.string.pisanjeDatotekeUspesno);
         pisanjeDatotekeUspesno = true;
@@ -155,20 +180,21 @@ public class App extends Application {
 
         return new String(bytes);
     }
-        /*private void vpisiVZunanjoDatoteko(String vsebina, String datoteka){
-        if(isExternalStorageWritable()){
-            File f = new File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),datoteka);
-            android.util.Log.d("Vpis", f.getAbsolutePath());
-            try{
-                OutputStream os = new FileOutputStream(f);
-                os.write(vsebina.getBytes());
-                os.close();
-            }catch (IOException e){
-                android.util.Log.w("ExternalStorage", "Napaka pri pisanju datoteke"+f,e);
-                vpisiDatoteko(getString(R.string.napaka),getString(R.string.napakaPriPisanjuVZunanjoDatoteko));
-              }
-            }
-        }*/
+
+
+
+    //HTTP(S) requesti
+    //(v študentsko prehrano ni vpisanih podatkov za menzo, da bi lahko uporabil lastno napisan parser)
+
+
+
+    //SPLOSNO
+    public  String eToString(Exception e){
+        Writer w =  new StringWriter();
+        e.printStackTrace(new PrintWriter(w));
+        return String.join("\n",UUIDaplikacije + ": "+ w.toString());
+    }
+
 
     public boolean jeInternetnaPovezavaVzpostavljena(){
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
