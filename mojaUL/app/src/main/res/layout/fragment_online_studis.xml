@@ -1,3 +1,4 @@
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,19 +22,19 @@
                 android:layout_marginTop="60dp"
                 android:text="@string/Ne_najdete_funkcionalnosti"
                 android:textSize="20sp" />
+
             <Button
                 android:id="@+id/onLineSTUDIS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="158dp"
-                android:layout_marginTop="125dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="200dp"
                 android:background="@drawable/border_red"
                 android:backgroundTint="@color/CgpUL"
-                android:textColor="#E03228"
-                app:backgroundTint="@null"
                 android:text="@string/poditeNaOnlineStudis"
-                />
+                android:textColor="#E03228"
+                app:backgroundTint="@null" />
         </RelativeLayout>
 
 

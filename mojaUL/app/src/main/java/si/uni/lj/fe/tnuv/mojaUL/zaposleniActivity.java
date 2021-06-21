@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 
 public class zaposleniActivity extends AppCompatActivity {
     private Zaposlen z;
-    private boolean paused = true;
+    private boolean paused = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,8 +60,6 @@ public class zaposleniActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if(paused){
-
-
             Intent i = new Intent(this,glavniPanelActivity.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(i);

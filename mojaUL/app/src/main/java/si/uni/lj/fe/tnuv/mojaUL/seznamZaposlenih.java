@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class seznamZaposlenih extends AppCompatActivity {
 
     private  boolean paused =false;
+    private boolean listViewItemClicked = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); //ok
@@ -75,8 +76,10 @@ public class seznamZaposlenih extends AppCompatActivity {
         lV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                 
+
+                    listViewItemClicked = true;
                     Intent myIntent = new Intent(view.getContext(),zaposleniActivity.class);
+
                     myIntent.putExtra("Zaposlen",new Gson().toJson(seznamVsehZaposlenih.get(position)));
                     startActivity(myIntent);
             }

@@ -66,7 +66,7 @@ public class prijavaVSistemActivity extends AppCompatActivity {
                 }
 
                 Intent i = new Intent(v.getContext(),WebviewActivity.class);
-                i.putExtra(getResources().getString(R.string.linkZaPomoc),getResources().getString(R.string.link_pomoc));
+                i.putExtra(getResources().getString(R.string.netLink),getResources().getString(R.string.link_pomoc));
                 startActivity(i);
             }
         });
@@ -127,9 +127,5 @@ public class prijavaVSistemActivity extends AppCompatActivity {
                 }
 
         );
-
-
-
-
     }
 }

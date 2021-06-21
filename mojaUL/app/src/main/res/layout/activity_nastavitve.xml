@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:src="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border"
+        >
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_centerVertical="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            app:srcCompat="@drawable/ic_baseline_settings_24" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+            android:text="@string/nastavitve"
+            />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+            <Button
+                android:id="@+id/darkMode_lightMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="180dp"
+
+                android:background="@drawable/border_red"
+                android:backgroundTint="@color/CgpUL"
+                android:textColor="#E03228"
+                app:backgroundTint="@null"
+                android:text="@string/nastaviBarvoOzadnja"
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/noveNastavitve"
+                />
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

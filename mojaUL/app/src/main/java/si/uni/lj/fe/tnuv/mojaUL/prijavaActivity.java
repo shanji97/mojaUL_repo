@@ -14,13 +14,17 @@ import androidx.biometric.BiometricManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.concurrent.Executor;
 
 public class prijavaActivity extends AppCompatActivity {
 
     private Button prstniOdtis;
+    private TextView pomoc;
 
     private Executor ex;
     private BiometricPrompt bP;
@@ -69,6 +73,19 @@ public class prijavaActivity extends AppCompatActivity {
                 bP.authenticate(pI);
             }
         });
+        pomoc = (TextView) findViewById(R.id.pomocPriPrijavi);
+        pomoc.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i =new Intent(v.getContext(),WebviewActivity.class);
+
+                        i.putExtra(getResources().getString(R.string.netLink),getResources().getString(R.string.link_pomoc));
+                        startActivity(i);
+                    }
+                }
+        );
+
 
     }
     @Override

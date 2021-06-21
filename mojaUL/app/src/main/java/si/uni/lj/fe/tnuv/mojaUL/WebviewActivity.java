@@ -30,7 +30,7 @@ public class WebviewActivity extends AppCompatActivity {
             Toast.makeText(this,getResources().getString(R.string.niInternetnePoveezave),Toast.LENGTH_LONG).show();
             return;
         }
-        wW.loadUrl(intent.getStringExtra(getResources().getString(R.string.linkZaPomoc)));
+        wW.loadUrl(intent.getStringExtra(getResources().getString(R.string.netLink)));
 
     }
     @Override

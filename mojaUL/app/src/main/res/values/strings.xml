@@ -61,7 +61,7 @@
     <string name="STUDIS">STUDIS</string>
     <string name="ZAPOSLENI">Zaposleni</string>
     <string name="spletnaStranFakultete">Spletna stran fakultete</string>
-    <string name="linkFaksa">https://github.com/shanji97/</string>
+    <string name="linkFaksa">https://fe.uni-lj.si/</string>
     <string name="linkStudis">https://github.com/shanji97/</string>
     <string name="nalagamStran">Nalagam stran</string>
     <string name="zivjo">"Živjo "</string>
@@ -81,5 +81,8 @@
     <string name="NAPAKA_V_APLIKACIJI">Napaka v aplikaciji.</string>
     <string name="nalagamZaposlene">Nalagam seznam zaposlenih</string>
     <string name="nalagamZaposlenega">Nalagam informacije zaposlenega</string>
+    <string name="nastaviBarvoOzadnja">Nastavi barvo ozadje</string>
+    <string name="noveNastavitve">Prišli ste do konca nastavitev, ki se konstanto posodabljajo, za čim boljšo uporabniško izkušnjo.</string>
+    <string name="netLink">netLink</string>
 
 </resources>

@@ -20,6 +20,8 @@ public class glavniPanelActivity extends AppCompatActivity {
     private ImageView ODJAVA;//@ODJAVA
     private ImageView FE; //@+id/FE_STRAN
 
+    private ImageView NASTAVITVE;
+
     private Button zaposleniGumb;
     private Intent i;
     @Override
@@ -77,6 +79,17 @@ public class glavniPanelActivity extends AppCompatActivity {
                         }
                         i = new Intent(v.getContext(),MainActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(i);
+                    }
+                }
+        );
+        NASTAVITVE =(ImageView) findViewById(R.id.NASTAVITVE);
+        NASTAVITVE.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        i = new Intent(v.getContext(),nastavitveActivity.class);
+
                         startActivity(i);
                     }
                 }
