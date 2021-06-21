@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
+
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 
@@ -17,6 +19,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -26,7 +29,9 @@ import java.util.List;
 public class studisActivity extends AppCompatActivity {
 
     private TabLayout tL;
-    private ViewPager vP;
+    private TextView tV;
+    //private ViewPager vP;
+    private ViewPager2 vP;
     private  Student s = null;
     private Boolean paused = false;
 
@@ -36,6 +41,7 @@ public class studisActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studis);
 
+        tV = findViewById(R.id.ime_in_priimek_Uporabnika_Studis);
         String podatkiStudenta = App.pridobiPodatke(getResources().getString(R.string.student_podatki));
         if (podatkiStudenta == null || podatkiStudenta.equals("")) {
             Toast.makeText(studisActivity.this, getResources().getString(R.string.podatkovStudentaNi), Toast.LENGTH_SHORT).show();
@@ -45,26 +51,72 @@ public class studisActivity extends AppCompatActivity {
             s = new Gson().fromJson(podatkiStudenta, Student.class);
             //podatki uspešno naloženi
         }
-
+        tV.setText(s.ime + " " + s.priimek);
         tL =  (TabLayout) findViewById(R.id.tL);
-        vP = (ViewPager) findViewById(R.id.viewPage_no2);
+        vP = (ViewPager2) findViewById(R.id.viewPage_no2);
+        FragmentAdapter adapter;
 
         ArrayList<String> imenaTabov = new ArrayList<String>();
         String []  imenaTabovSeznam  = new String[] {
 
                 getResources().getString(R.string.o_studentu_napis),
-                getResources().getString(R.string.seznam_izpitov_napis),
                 getResources().getString(R.string.vec_na_online_verziji_studis_napis)
         };
 
-        for(int i = 0; i < imenaTabovSeznam.length;i++){
+        for(int i = 0; i < imenaTabovSeznam.length;i++)
             imenaTabov.add(imenaTabovSeznam[i]);
-        }
-        prepareViewPager(vP,imenaTabov);
 
-        tL.setupWithViewPager(vP);
+
+
+            FragmentManager fm = getSupportFragmentManager();
+            adapter = new FragmentAdapter(fm,getLifecycle());
+            vP.setAdapter(adapter);
+
+            for(int j=0;j<imenaTabov.size();j++){
+                tL.addTab(
+
+                        tL.newTab().setText(imenaTabov.get(j))
+                );
+
+            }
+
+            tL.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    vP.setCurrentItem(tab.getPosition());
+                }
+
+                @Override
+                public void onTabUnselected(TabLayout.Tab tab) {
+
+                }
+
+                @Override
+                public void onTabReselected(TabLayout.Tab tab) {
+
+                }
+            });
+            vP.registerOnPageChangeCallback(
+
+                    new ViewPager2.OnPageChangeCallback() {
+                        @Override
+                        public void onPageSelected(int position) {
+                            tL.selectTab(tL.getTabAt(position));
+                        }
+                    }
+            );
+
+
+
+
+
+      /*  prepareViewPager(vP,imenaTabov);
+
+        tL.setupWithViewPager(vP);*/
 
     }
+
+    //DISCONTINUED, ker ni delovalo tak kot trabe
     private void prepareViewPager(ViewPager viewPager, ArrayList<String> arrayList){
         MainAdapter mA = new MainAdapter(getSupportFragmentManager());
 
@@ -85,6 +137,11 @@ public class studisActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         paused = true;
+        if(App.getInstance().studisInit){
+            App.getInstance().studisInit = false;
+            return;
+
+        }
         //shranimo študenta v preferences
         Student s;
         String podatkiStudenta = App.pridobiPodatke(getResources().getString(R.string.student_podatki));
@@ -117,7 +174,7 @@ public class studisActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if(paused){
+        if(paused &&App.getInstance().studisInit==false){
 
 
         Intent i = new Intent(this,glavniPanelActivity.class);

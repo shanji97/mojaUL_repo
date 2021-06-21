@@ -1,5 +1,6 @@
 package si.uni.lj.fe.tnuv.mojaUL;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -63,10 +64,20 @@ public class OnlineStudis extends Fragment {
                              Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.fragment_online_studis, container, false);
 
-        Button button = v.findViewById(R.id.onLineSTUDIS);
 
 
-
+        Button OnlineStudis = v.findViewById(R.id.onLineSTUDIS);
+        OnlineStudis.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        App.getInstance().studisInit = true;
+                        Intent i =new Intent(v.getContext(),WebviewActivity.class);
+                        i.putExtra(getResources().getString(R.string.netLink),getResources().getString(R.string.studisFaksa));
+                        startActivity(i);
+                    }
+                }
+        );
         return v;
     }
 }

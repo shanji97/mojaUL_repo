@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.gson.Gson;
+
 import si.uni.lj.fe.tnuv.aleksanderkovac.mojaul.R;
 
 /**
@@ -61,6 +63,11 @@ public class OStudentu extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Student s  = null;
+        String student = App.pridobiPodatke("student");
+        s = new Gson().fromJson(student,Student.class);
+
+
         View v = inflater.inflate(R.layout.fragment_o_studentu, container, false);
 
 

@@ -84,5 +84,6 @@
     <string name="nastaviBarvoOzadnja">Nastavi barvo ozadje</string>
     <string name="noveNastavitve">Prišli ste do konca nastavitev, ki se konstanto posodabljajo, za čim boljšo uporabniško izkušnjo.</string>
     <string name="netLink">netLink</string>
+    <string name="studisFaksa">https://studij.fe.uni-lj.si/Account/</string>
 
 </resources>

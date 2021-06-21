@@ -30,6 +30,7 @@ public class App extends Application {
     private static boolean prviZagon = false;
     private static String filename = "";
 
+    public boolean studisInit = false;
 
     public String UUIDaplikacije;
 

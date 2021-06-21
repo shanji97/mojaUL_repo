@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="100dp"
-
+            android:id="@+id/ime_in_priimek_Uporabnika_Studis"
             android:text="@string/ime_in_priimek_napis"
             />
 
@@ -39,12 +39,12 @@
             app:tabSelectedTextColor ="@color/white"
             android:background="@color/CgpUL"
             ></com.google.android.material.tabs.TabLayout>
-            <androidx.viewpager.widget.ViewPager
+            <androidx.viewpager2.widget.ViewPager2
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/viewPage_no2">
 
-            </androidx.viewpager.widget.ViewPager>
+            </androidx.viewpager2.widget.ViewPager2>
     </RelativeLayout>
 
 </RelativeLayout>
