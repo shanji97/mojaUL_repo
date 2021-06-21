@@ -4,84 +4,174 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="si.uni.lj.fe.tnuv.mojaUL.OnlineStudis">
-
-   <!-- <ScrollView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">-->
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             >
 
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/profilnaOdUserja"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/ic_baseline_account_circle_24" />
-
+            <ImageView
+                android:id="@+id/telefon_"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/ic_baseline_phone_android_24" />
+            <ImageView
+                android:id="@+id/telefon2_"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="95dp"
+                android:src="@drawable/ic_baseline_phone_24" />
+<!--
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/Sprememba_podatkov"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/mobilniInStacionarniTelefon"
+                android:gravity="center"
+                android:textSize="15"
+                android:layout_marginLeft="180dp"-->
+
+
                 tools:layout_editor_absoluteX="211dp"
                 tools:layout_editor_absoluteY="62dp" />
 
             <EditText
-                android:id="@+id/osebniEmail"
+                android:id="@+id/gsm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textEmailAddress"
+                android:inputType="phone"
+                android:layout_marginLeft="180dp"
+                android:hint="+38640724968"
+                android:layout_marginTop="30dp"
+
+                tools:layout_editor_absoluteX="185dp"
+                tools:layout_editor_absoluteY="204dp" />
+            <EditText
+                android:id="@+id/stac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="180dp"
+                android:hint="+38625761867"
+                android:layout_marginTop="90dp"
+                android:inputType="phone"
+                tools:layout_editor_absoluteX="185dp"
+                tools:layout_editor_absoluteY="204dp" />
+            <EditText
+                android:id="@+id/telefon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="30dp"
+
+                tools:layout_editor_absoluteX="185dp"
+                tools:layout_editor_absoluteY="204dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/naslov_za_vrocanje"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="160dp"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/drzava"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="200dp"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/ulica"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="270dp"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/kraj"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="340dp"
+                android:textSize="20sp"/>
+                <ImageView
+                    android:id="@+id/i3"
+                    android:layout_width="1dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+                    android:layout_marginTop="180dp"
+
+                    />
+<EditText
+                android:id="@+id/drzava"
+               android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="190dp"
+                android:hint="Slovenija"
+
+                tools:layout_editor_absoluteX="185dp"
+                tools:layout_editor_absoluteY="204dp" />
+            <EditText
+                android:id="@+id/ulica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="260dp"
+                android:hint="Lendavske gorice 409a"
+
+                tools:layout_editor_absoluteX="185dp"
+                tools:layout_editor_absoluteY="204dp" />
+            <EditText
+                android:id="@+id/posta_obcina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="330dp"
+                android:hint="Lendava-Lendva"
+
                 tools:layout_editor_absoluteX="185dp"
                 tools:layout_editor_absoluteY="204dp" />
 
-            <TextView
-                android:id="@+id/kontaktNiPodatki"
+            <Button
+                android:id="@+id/shraniPodatke"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/kontaktniPodatki"
-                tools:layout_editor_absoluteX="20dp"
-                tools:layout_editor_absoluteY="166dp" />
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="158dp"
+                android:layout_marginTop="410dp"
+                android:background="@drawable/border_red"
+                android:backgroundTint="@color/CgpUL"
+                android:textColor="#E03228"
+                app:backgroundTint="@null"
+                android:text="@string/shrani"
+                />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_email_24"
-                tools:layout_editor_absoluteX="46dp"
-                tools:layout_editor_absoluteY="209dp" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_phone_24" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <!--
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/profilUporabnika"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                app:srcCompat="@drawable/ic_baseline_account_circle_24"/>
-            <TextView
-                android:id="@+id/ime_in_priimek_Uporabnika"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="175dp"
-                android:layout_marginTop="60dp"
-                android:textSize="20sp"
-                android:text="@string/ImeInPriimekStudenta"/>
-            <EditText
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></EditText>
         </RelativeLayout>
-    </ScrollView>-->
+
+    </ScrollView>
 
 </FrameLayout>

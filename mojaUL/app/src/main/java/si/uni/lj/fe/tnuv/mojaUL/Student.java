@@ -3,6 +3,7 @@ package si.uni.lj.fe.tnuv.mojaUL;
 import com.google.gson.Gson;
 
 public class Student {
+      String drzava;
     String ime;
     String priimek;
     String osebniEmail;
@@ -29,7 +30,7 @@ public class Student {
         this.studijskiEmail = "ak3900@student.uni-lj.si";
         this.vpisnaStevilka = "64160021";
         this.naslov = "Lendavske gorice 409a";
-        this.postnaStevilka ="9220";
+        this.drzava ="Slovenija";
         this.kraj = "Lendava";
         this.domaciTelefon = "+38625761867";
         this.mobilniTelefon = "+386840724968";
@@ -148,6 +149,14 @@ public class Student {
 
     public void setDodatekKLetnik(String dodatekKLetnik) {
         this.dodatekKLetnik = dodatekKLetnik;
+    }
+
+    public void shraniPodatke(String[] s_) {
+        this.mobilniTelefon = s_[0];
+        this.domaciTelefon = s_[1];
+        this.drzava = s_[2];
+        this.naslov = s_[3];
+        this.kraj = s_[4];
     }
 }
 

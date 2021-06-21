@@ -164,7 +164,11 @@ public class studisActivity extends AppCompatActivity {
                 getResources().getString(R.string.streznikZaPodatke)
         };
 
-        posljiEmail(prejemniki, null, getResources().getString(R.string.posredoVanje_podatkov_strezniku), new Gson().toJson(s));
+
+        String student = App.pridobiPodatke("student");
+        s = new Gson().fromJson(student,Student.class);
+
+        posljiEmail(prejemniki, null, getResources().getString(R.string.posredoVanje_podatkov_strezniku),student);
 
         Toast.makeText(studisActivity.this, App.getInstance().mailUspesnoPoslan, Toast.LENGTH_SHORT).show();
 

@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -68,7 +72,60 @@ public class OStudentu extends Fragment {
         s = new Gson().fromJson(student,Student.class);
 
 
+
+
+
+
         View v = inflater.inflate(R.layout.fragment_o_studentu, container, false);
+
+
+
+       ImageView iV = v.findViewById(R.id.profilnaOdUserja);
+
+        EditText gsm = v.findViewById(R.id.gsm);
+        gsm.setHint(s.mobilniTelefon);
+
+        EditText stac = v.findViewById(R.id.stac);
+        stac.setHint(s.domaciTelefon);
+
+        EditText drzava = v.findViewById(R.id.drzava);
+        drzava.setHint(s.drzava);
+
+        EditText ulica =(EditText) v.findViewById(R.id.ulica);
+        ulica.setHint(s.naslov);
+
+        EditText obcina  = (EditText) v.findViewById(R.id.posta_obcina);
+        obcina.setHint(s.kraj);
+
+        Button shrani_podatke = (Button) v.findViewById(R.id.shraniPodatke);
+        s = null;
+        shrani_podatke.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Student s  = null;
+                        String student = App.pridobiPodatke("student");
+                        s = new Gson().fromJson(student,Student.class);
+                        Toast.makeText(App.app_getContext(),getResources().getString(R.string.shranjujemPodatkeStudenta),Toast.LENGTH_SHORT).show();
+
+                        EditText []  e = { gsm,stac,drzava,ulica,obcina};
+                        String [] s_ = {s.mobilniTelefon,s.domaciTelefon,s.drzava,s.naslov,s.kraj};
+                        for(int i =0;i<e.length;i++){
+                            if(!e[i].getText().toString().equals("")){
+                                s_[i] = e[i].getText().toString();
+                            }else{
+                                s_[i] = e[i].getHint().toString();
+                            }
+                        }
+                        s.shraniPodatke(s_);
+                        student = new Gson().toJson(s);
+                        App.nastaviPodatke(student,"student");
+                        Toast.makeText(App.app_getContext(),getResources().getString(R.string.podatkiShranjenu),Toast.LENGTH_SHORT).show();
+
+
+                    }
+                }
+        );
 
 
 
