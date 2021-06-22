@@ -142,6 +142,9 @@ public class studisActivity extends AppCompatActivity {
             return;
 
         }
+        if(!App.getInstance().spremenjeno){
+            return;
+        }
         //shranimo študenta v preferences
         Student s;
         String podatkiStudenta = App.pridobiPodatke(getResources().getString(R.string.student_podatki));

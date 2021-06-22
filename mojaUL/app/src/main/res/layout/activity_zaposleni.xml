@@ -25,6 +25,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="100dp"
             android:text="@string/zaposlen_napis"
+            android:textSize="20dp"
             />
     </RelativeLayout>
     <RelativeLayout

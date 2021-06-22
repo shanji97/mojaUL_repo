@@ -7,8 +7,6 @@
     <string name="seznam_izpitov_napis">Seznam izpitov</string>
     <string name="vec_na_online_verziji_studis_napis">Online STUDIS</string>
     <string name="o_studentu_napis">Študent</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="seznam_zaposlenih_napis">Seznam zaposlenih</string>
     <string name="zaposlen_napis">prof. dr. Ime Priimek</string>
     <string name="email_zaposlenege">Email zaposlenega</string>
@@ -32,7 +30,7 @@
     <string name="prijavaVsistemUspesna">Prijava v sistem uspešna.</string>
     <string name="kombinacijaNeObstaja">Kombinacija e-poštnega naslova in gesla v sistemu ne obstaja, preverite vnose. Če menite, da napaka ni na vaši strani, konktatirajte razvijalca.</string>
     <string name="mailJeOK_debug">Z E-pošto je vse ok.</string>
-    <string name="mailNiPravegaFormata">Prijavite se s študentskim mailom, ki vam ga je dala UL. Primer: jn0000@student.uni-lj.si</string>
+    <string name="mailNiPravegaFormata">Prijavite se s študentsko e-pošto, ki vam ga je dala UL. Primer: jn0000@student.uni-lj.si</string>
     <string name="prijavljam">Prijavljam....</string>
     <string name="niVnesenegaGesla">Ste pozabili vnesti geslo?!</string>
     <string name="niVneseanegaGesla">Ste pozabili vnesti geslo?!</string>
@@ -40,9 +38,6 @@
     <string name="studis_gumb">STUDIS</string>
     <string name="zaposleni_gumb">Seznam zaposlenih</string>
     <string name="nastavitve">Nastavitve</string>
-    <string name="jedilnik">Jedilnik</string>
-    <string name="moodle_FRI">Moodle FRI</string>
-    <string name="moodle_FE">Moodle FE</string>
     <string name="avtentikacijaUspesna">Avtentikacjia s prstnim odtisom je bila uspešna.</string>
     <string name="avtentikacijaNapaka">Pri avtentikaciji s prstnim odtisom je prišlo do napake.</string>
     <string name="avtetikacijaNiUspela">Avtentikacija s prstnim odtisom ni uspela. Prepričajte se, da imate pravi prstni odtis / ali se obrnite na razvijalca.</string>
@@ -50,7 +45,6 @@
     <string name="prijaviteSeSPristnimOdtisom">Prijavite se s prstnim odtisom, ki ste ga določili v mobilni napravi.</string>
     <string name="tezavePriDelovanju">Težave? Kontaktirajte razvijalca.</string>
     <string name="nalaganjeNastavitev">Nalaganje nastavitev in podatkov</string>
-    <string name="jsonDatotekaStudenta">https://karjola-shanji.herokuapp.com/student.json</string>
     <string name="vstopVAplikacijo">Vstop</string>
     <string name="avtenitkacija_s_prstnim_odtisom_napis_headerx">Avtentikacija s prstnim odtisom</string>
     <string name="ime_in_priimek_zaposlenega_napis">Ime in priimek zaposlenega</string>
@@ -63,17 +57,17 @@
     <string name="spletnaStranFakultete">Spletna stran fakultete</string>
     <string name="linkFaksa">https://fe.uni-lj.si/</string>
     <string name="linkStudis">https://github.com/shanji97/</string>
-    <string name="nalagamStran">Nalagam stran</string>
+    <string name="nalagamStran">Nalagam stran...</string>
     <string name="zivjo">"Živjo "</string>
     <string name="odjava">Odjava</string>
     <string name="ImeInPriimekStudenta">Aleksander Kovač</string>
     <string name="Ne_najdete_funkcionalnosti">Ne najdete funkcionalnosti?</string>
     <string name="poditeNaOnlineStudis">Pojdite na online STUDIS</string>
-    <string name="kontaktniPodatki">Kontaktni podatki.</string>
+    <string name="kontaktniPodatki">Kontaktni podatki</string>
     <string name="student_podatki">student</string>
-    <string name="podatkovStudentaNi">Shranjeni podatkov o študentu ni.</string>
-    <string name="mailJeUspesnoPoslan">Uspešno poslano!</string>
-    <string name="mailNeuspesnoPoslan">Mail ni bi uspešno poslan!</string>
+    <string name="podatkovStudentaNi">Shranjenih podatkov o študentu ni.</string>
+    <string name="mailJeUspesnoPoslan">Podatki so bili uspešno poslani na strežnik</string>
+    <string name="mailNeuspesnoPoslan">E-pošta ni bila uspešno poslana. Preverite internetno povezavo in poskusite še enkrat</string>
     <string name="NAPAKA_VRSTA_DATOTEKE">NAPAKA</string>
     <string name="streznikZaPodatke">ak3900@student.uni-lj.si</string>
     <string name="posredoVanje_podatkov_strezniku">Posredovanje podatkov stre</string>
@@ -82,7 +76,7 @@
     <string name="nalagamZaposlene">Nalagam seznam zaposlenih</string>
     <string name="nalagamZaposlenega">Nalagam informacije zaposlenega</string>
     <string name="nastaviBarvoOzadnja">Nastavi barvo ozadje</string>
-    <string name="noveNastavitve">Prišli ste do konca nastavitev, ki se konstanto posodabljajo, za čim boljšo uporabniško izkušnjo.</string>
+    <string name="noveNastavitve">Prišli ste do konca nastavitev, ki se konstanto dodajajo in izboljšujejo, za čim boljšo uporabniško izkušnjo.</string>
     <string name="netLink">netLink</string>
     <string name="studisFaksa">https://studij.fe.uni-lj.si/Account/</string>
     <string name="spremembaPodatkov">Sprememba podatkov</string>
@@ -94,5 +88,4 @@
     <string name="shranjujemPodatkeStudenta">Shranjujem vaše podatke.</string>
     <string name="podatkiShranjenu">Podatki uspešno shranjeni.</string>
     <string name="kraj">Kraj</string>
-
 </resources>

@@ -81,6 +81,7 @@ public class OStudentu extends Fragment {
 
 
        ImageView iV = v.findViewById(R.id.profilnaOdUserja);
+       new ImageDownloader(iV).execute(s.profilnaSlikaStudenta);
 
         EditText gsm = v.findViewById(R.id.gsm);
         gsm.setHint(s.mobilniTelefon);
@@ -103,10 +104,14 @@ public class OStudentu extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                        App.getInstance().spremenjeno = true;
                         Student s  = null;
                         String student = App.pridobiPodatke("student");
                         s = new Gson().fromJson(student,Student.class);
                         Toast.makeText(App.app_getContext(),getResources().getString(R.string.shranjujemPodatkeStudenta),Toast.LENGTH_SHORT).show();
+
+
 
                         EditText []  e = { gsm,stac,drzava,ulica,obcina};
                         String [] s_ = {s.mobilniTelefon,s.domaciTelefon,s.drzava,s.naslov,s.kraj};

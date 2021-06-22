@@ -27,6 +27,8 @@ public class App extends Application {
     private  static Context ctx;
 
 
+
+
     private static boolean prviZagon = false;
     private static String filename = "";
 
@@ -45,6 +47,7 @@ public class App extends Application {
     public String branjeDatotekeInformacija;
     public boolean branjeDatotekeUspesno = false;
 
+    public boolean spremenjeno = false;
     public static void nastaviPodatke(String vrednost,String tip) {
 
         SharedPreferences sp = ctx.getSharedPreferences(tip,Context.MODE_PRIVATE);

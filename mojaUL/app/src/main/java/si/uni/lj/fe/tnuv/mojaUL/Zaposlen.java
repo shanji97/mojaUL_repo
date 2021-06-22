@@ -20,41 +20,36 @@ public class Zaposlen {
         //V kolikor za testne osebe nimam podatkov, dam notri prazen string in dam privzeto vrednost moje podatke
 
         //primerja z equals
-        if(telefonskaStevilka==""){
+        /*if(telefonskaStevilka==""){
             telefonskaStevilka="+38640724968";
 
-        }
+        }*/
         this.telefonskaStevilka=telefonskaStevilka;
-        if(prostor==""){
+        /*if(prostor==""){
             prostor="P12";
-        }
+        }*/
         this.prostor = prostor;
-        if(email==""){
+        /*if(email==""){
             email="ak3900@student.uni-lj.si";
-        }
+        }*/
 
-        if(naziv ==""){
+        /*if(naziv ==""){
             naziv = "študent";
-        }
+        }*/
 
         this.naziv = naziv;
-        if(priimek==""){
-            priimek="Kovač";
-        }
+
         this.priimek = priimek;
 
-        if(ime==""){
-            ime="Aleksander";
-        }
         this.ime = ime;
-        if(opis=="") {
+        /*if(opis=="") {
          opis="Lorem Ipsum";
-        }
+        }*/
         this.opis=opis;
         this.email = this.ime + "."+this.priimek +"@"+ App.getRes().getString(R.string.domena_fakultete_FE);
-        if(povezavaDoProfilneFotografije==""){
+        /*if(povezavaDoProfilneFotografije==""){
             povezavaDoProfilneFotografije = "https://www.fe.uni-lj.si/mma_bin.php?id=2014093012230537&src=min"; // privzeto bo fotografija dekana
-        }
+        }*/
         this.povezavaDoProfilneFotografije = povezavaDoProfilneFotografije;
     }
 

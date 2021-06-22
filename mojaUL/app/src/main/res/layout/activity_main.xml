@@ -22,9 +22,9 @@
         android:id="@+id/gumbZaVstopVAplikacijo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="500dp"
-        android:background="@android:color/white"
+        android:background="@drawable/border_white"
         android:backgroundTint="@android:color/white"
-        android:textColor="#E03228"
+        android:textColor="@color/white"
         android:text="@string/vstopVAplikacijo"
         app:backgroundTint="@null"
         ></Button>

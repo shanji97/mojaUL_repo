@@ -22,6 +22,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="100dp"
             android:text="@string/avtenitkacija_s_prstnim_odtisom_napis_headerx"
+            android:textSize="20dp"
             />
 
     </RelativeLayout>
@@ -69,7 +70,6 @@
             android:textColor="@color/color_stroke_redUL"
             android:layout_marginTop="600dp"
             android:text="@string/potrbujetePomoc"
-
             />
     </RelativeLayout>
 

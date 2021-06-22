@@ -23,6 +23,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="100dp"
             android:text="@string/nastavitve"
+            android:textSize="20dp"
             />
 
     </RelativeLayout>
@@ -43,7 +44,7 @@
                 android:layout_height="75dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+                app:srcCompat="@drawable/ic_baseline_invert_colors_24" />
             <Button
                 android:id="@+id/darkMode_lightMode"
                 android:layout_width="wrap_content"

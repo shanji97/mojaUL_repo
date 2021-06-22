@@ -18,7 +18,7 @@ public class Student {
 
     String letnik;
     String dodatekKLetnik;
-
+    String profilnaSlikaStudenta;
 
     public Student
             (
@@ -37,6 +37,8 @@ public class Student {
         this.studijskiProgram = "Multimedija UNI REDNI";
         this.letnik = "3";
         this.dodatekKLetnik="A";
+        this.profilnaSlikaStudenta = "https://i.imgur.com/0frqPHD.jpg";
+
 
     }
 

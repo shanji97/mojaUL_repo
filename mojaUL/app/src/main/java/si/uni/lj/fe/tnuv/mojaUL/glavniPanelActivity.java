@@ -60,7 +60,7 @@ public class glavniPanelActivity extends AppCompatActivity {
                     public void onClick(View v) {
 
                         i = new Intent(v.getContext(),WebviewActivity.class);
-                        i.putExtra(getResources().getString(R.string.linkFaksa),getResources().getString(R.string.linkFaksa));
+                        i.putExtra(getResources().getString(R.string.netLink),getResources().getString(R.string.linkFaksa));
                         startActivity(i);
                     }
                 }
